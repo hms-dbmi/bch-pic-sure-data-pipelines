@@ -13,7 +13,7 @@
 
                 sh &apos;&apos;&apos;
                         echo &quot;Build Airflow Stack&quot;
-                        cd /opt/pic-sure-data-pipelines
+                        cd /opt/pic-sure-data-pipelines/bch-pic-sure-airflow
                         docker-compose down
                         docker-compose build &amp;&amp; docker-compose up -d
                         sleep 20
