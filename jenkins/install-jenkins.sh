@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "Build Jenkins Docker Container" 
+echo "Build Jenkins Docker Container"
 JENKINS=`pwd`
 
 echo 'JENKINS dir: ' $JENKINS

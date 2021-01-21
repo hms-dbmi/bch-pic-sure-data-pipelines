@@ -24,5 +24,6 @@ chmod +x /usr/local/bin/docker-compose
 mount /tmp -o remount,exec
 docker-compose --version
 
+../jenkins/install-jenkins.sh
 
 echo "Installation script complete."

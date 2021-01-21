@@ -1,0 +1,32 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.87">
+    <script>pipeline {
+    agent any
+
+    stages {
+        stage(&apos;Build-Airflow-Stack&apos;) {
+            steps {
+
+                sh &apos;&apos;&apos;
+                        echo &quot;Build Airflow Stack&quot;
+                        cd /opt/pic-sure-data-pipelines
+                        docker-compose down
+                        docker-compose build &amp;&amp; docker-compose up -d
+                        sleep 20
+
+                 &apos;&apos;&apos;
+
+
+            }
+        }
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
