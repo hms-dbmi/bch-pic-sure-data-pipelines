@@ -7,8 +7,8 @@ JENKINS=`pwd`
 echo 'JENKINS dir: ' $JENKINS
 
 cd $JENKINS
-docker-compose down
-docker-compose build && docker-compose up -d
+/usr/local/bin/docker-compose down
+/usr/local/bin/docker-compose build && /usr/local/bin/docker-compose up -d
 
 sleep 10
 
